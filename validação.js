@@ -1,30 +1,30 @@
+const btn = document.getElementById("btn");
 const form = document.getElementById("formulario");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const passwardconfirm = document.getElementById("senha-confirm");
+const passwordConfirm = document.getElementById("senha-confirm");
 
-form.addEventListener("submit", (event) =>{
+btn.addEventListener("click", (event) => {
     event.preventDefault();
+    checkInputEmail();
+});
 
-checkInputUsername();
-})
+function checkInputEmail() {
+    const emailValue = email.value.trim();
 
- function checkInputUsername(){
-    const usernameValue = username.value;
+    if (emailValue === "murilo@gmail.com") {
+        errorInput(email, "Este e-mail já está em uso.");
+    }
+}
 
-    if(usernameValue === ""){
-        errorInput(username, "preencha o username ")
+function errorInput(input, message) {
+    const formItem = input.parentElement;
+    const textMessage = formItem.querySelector("small"); // ou "span", dependendo do HTML
 
+    if (textMessage) {
+        textMessage.innerText = message;
     }
 
- }
-
- function errorInput(input,messege){
-    const formItem = input.parentElement;
-    const textMessege = formItem.querySelector("a")
-     
-textMessege.innerText= message;
-
-formItem.className= "cont-form error"
+    formItem.className = "cont-form error"; // Altera a classe corretamente
 }

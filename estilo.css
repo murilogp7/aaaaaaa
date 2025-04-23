@@ -15,7 +15,7 @@ body{
 
 }
 .container{
-    background-color: aliceblue;
+    background-color: rgb(205, 220, 233);
     border-radius: 14px;
     margin: 14x;
     max-width: 600px;
@@ -27,21 +27,21 @@ body{
 
 .header{
    background: linear-gradient( 
-90deg,rgb(98, 98, 209) 0%, rgb(126, 31, 31) 100%);
+90deg,rgb(149, 149, 202) 0%, rgb(45, 6, 134) 100%);
 padding: 24px;
 text-align: center;
 color: white;
 }
 
 .formulario{
-    margin-bottom: 18px;
+    padding: 18px;
 
 }
 
 .cont-form{
     margin-bottom: 8px;
-padding-bottom: 18px;
-position: relative;
+    padding-bottom: 18px;
+    position: relative;
 }
 
 .cont-form label{
@@ -50,9 +50,39 @@ position: relative;
 
 }
 
-.form-content input{
+.cont-form input{
     display: block;
     width: 100%;
     border-radius: 8px;
-    padding: 2px solid #dfdfdf;
+    padding: 8px;
+    border: 2px solid #ffffff;
 }
+.cont-form a{
+position: absolute;
+bottom: -8px;
+left: 0;
+visibility:hidden;
+
+
+
+}
+.formulario button{
+    background-color: rgb(141, 141, 202);
+    color:white;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+    .cont-form.error input{
+        border-color: red;
+
+    }
+
+    .cont-form.error a{
+        color:red;
+        visibility: visible;
+    }

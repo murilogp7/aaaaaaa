@@ -17,17 +17,49 @@
      </section>
 <form id="formulario" class="formulario">
 
-<div class="cont-form">
+<div class="cont-form error">
     
-    <label for="username">usario</label>
+    <label for="username">Digite o nome do usuário</label>
     <input
     type="text" id="username" placeholder="digite o nome do usario...">
+    
     <a>Aqui vai a mensagem de erro...</a>
+
 </div>
+
+<div class="cont-form">
+    
+    <label for="email">E-mail</label>
+    <input
+    type="email" id="email" placeholder="digite o seu email...">
+    <a>Aqui vai a mensagem de erro...</a>
+
+</div>
+
+<div class="cont-form">
+    
+    <label for="password">Senha</label>
+    <input
+    type="password" id="senha" placeholder="digite sua senha...">
+    <a>Aqui vai a mensagem de erro...</a>
+
+</div>
+
+<div class="cont-form">
+    
+    <label for="password">Confirme sua senha</label>
+    <input
+    type="password" id="senha-confirm" placeholder="digite sua senha...">
+    <a>Aqui vai a mensagem de erro...</a>
+
+</div>
+
+<button type="submit" >Cadastrar</button>
 </form>
     
 </div>
 
+<script src="./validação.js"></script>
 
 </body>
 </html>
